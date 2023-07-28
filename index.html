@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/daisyui@3.3.1/dist/full.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body class="bg-[#1d232a]">
+        <div class="h-screen w-screen flex flex-col p-8 container mx-auto">
+            <div
+                class="navbar bg-base-100 border-1 border-gray-400 border-b-2 bg-[#1d232a]"
+            >
+                <a
+                    class="btn btn-ghost normal-case text-4xl font-bold text-white"
+                    href="index.html"
+                    >Calculadora - JM</a
+                >
+            </div>
+            <!-- Grilla del nav -->
+
+            <div
+                class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8 mt-2 border-gray-400 border-b-2"
+            >
+                <div
+                    class="h-32 rounded-lg lg:col-span-2 md:flex md:items-center md:justify-center md:gap-20"
+                >
+                    <div class="mb-2">
+                        <label class="text-gray-100" for=""
+                            >Escribe un Numero:</label
+                        >
+                        <input
+                            type="text"
+                            placeholder="Numero #1"
+                            class="input input-bordered border-white w-full max-w-xs"
+                            id="inputOne"
+                        />
+                    </div>
+                    <div class="mb-2">
+                        <label class="text-gray-100" for=""
+                            >Escribe un Numero:</label
+                        >
+                        <input
+                            type="text"
+                            placeholder="Numero #2"
+                            class="input input-bordered w-full max-w-xs border-white"
+                            id="inputTwo"
+                        />
+                    </div>
+                </div>
+                <div class="h-32 rounded-lg flex items-center mx-auto">
+                    <div class="stats shadow bg-[#1d232a]">
+                        <div class="stat text-[#a6adba]">
+                            <div class="stat-title text-[#a6adba]">
+                                Total Page Views
+                            </div>
+                            <div class="stat-value">89,400</div>
+                            <div class="stat-desc text-[#a6adba]">
+                                21% more than last month
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Aqui esta la grilla de los botones -->
+
+            <div
+                class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8 mt-4 border-gray-400 border-b-2"
+            >
+                <div
+                    class="h-72 rounded-lg flex flex-col items-center gap-3 p-4 justify-around"
+                >
+                    <button
+                        class="inline-block rounded w-40 text-center bg-indigo-600 px-8 py-3 text-sm font-medium text-white transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:bg-indigo-500"
+                        value="Sumar"
+                    >
+                        Sumar
+                    </button>
+                    <button
+                        class="inline-block rounded w-40 text-center bg-indigo-600 px-8 py-3 text-sm font-medium text-white transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:bg-indigo-500"
+                        value="Restar"
+                    >
+                        Restar
+                    </button>
+                    <button
+                        class="inline-block rounded w-40 text-center bg-indigo-600 px-8 py-3 text-sm font-medium text-white transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:"
+                        value="Multiplicacion"
+                    >
+                        Multiplicar
+                    </button>
+                </div>
+                <div
+                    class="h-72 rounded-lg flex flex-col items-center gap-3 p-4 justify-around"
+                >
+                    <button
+                        class="inline-block rounded w-40 text-center bg-indigo-600 px-8 py-3 text-sm font-medium text-white transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:bg-indigo-500"
+                        value="Division"
+                    >
+                        Division
+                    </button>
+                    <button
+                        class="inline-block rounded w-40 text-center bg-indigo-600 px-8 py-3 text-sm font-medium text-white transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:bg-indigo-500"
+                        value="Potenciacion"
+                    >
+                        Potenciacion
+                    </button>
+                    <button
+                        class="inline-block rounded w-40 text-center bg-indigo-600 px-8 py-3 text-sm font-medium text-white transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:bg-indigo-500"
+                        value="Concatenacion"
+                    >
+                        Concatenacion
+                    </button>
+                </div>
+                <div
+                    class="h-72 rounded-lg flex flex-col items-center gap-3 p-4 justify-around"
+                >
+                    <button
+                        class="inline-block rounded w-40 text-center bg-indigo-600 px-8 py-3 text-sm font-medium text-white transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:bg-indigo-500"
+                        value="intIf"
+                    >
+                        Instruccion if
+                    </button>
+                    <button
+                        class="inline-block rounded w-40 text-center bg-indigo-600 px-8 py-3 text-sm font-medium text-white transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:bg-indigo-500"
+                        value="intFor"
+                    >
+                        Intruccion for
+                    </button>
+                    <button
+                        class="inline-block rounded w-40 text-center bg-indigo-600 px-8 py-3 text-sm font-medium text-white transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:bg-indigo-500"
+                        value="intSwitch"
+                    >
+                        Instrucion switch
+                    </button>
+                </div>
+            </div>
+
+            <div class="my-2">
+                <!-- Mensaje de error-->
+                <section class="mb-12 hidden" id="Resultado">
+                    <div
+                        class="alert alert-dismissible fade show items-center justify-between rounded-lg py-4 px-6 text-center text-white md:flex md:text-left bg-slate-700"
+                    >
+                        <div
+                            class="mb-4 flex flex-wrap items-center justify-center md:mb-0 md:justify-start"
+                        >
+                            <span class="mr-2 [&>svg]:h-5 [&>svg]:w-5">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="2"
+                                    stroke="currentColor"
+                                    class="text-white"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048 8.287 8.287 0 009 9.6a8.983 8.983 0 013.361-6.867 8.21 8.21 0 003 2.48z"
+                                    />
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M12 18a3.75 3.75 0 00.495-7.467 5.99 5.99 0 00-1.925 3.546 5.974 5.974 0 01-2.133-1A3.75 3.75 0 0012 18z"
+                                    />
+                                </svg>
+                            </span>
+                            <strong class="mr-1">Resultado:</strong>
+                            <p id="mensaje">Get it now before it's to late</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>
